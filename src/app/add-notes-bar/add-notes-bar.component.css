@@ -1,0 +1,23 @@
+.app-button-img-note {
+  width: 50px;
+  background-color: white;
+  border-radius: 5px;
+  filter: saturate(3);
+  -webkit-filter: saturate(3);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.app-button-img-note:hover{
+  width: 50px;
+  border-radius: 5px;
+  filter: contrast(160%);
+  -webkit-filter: contrast(160%);
+}
+
+.app-label-new-note{
+  font-size: 25px;
+  text-align: center;
+  padding-left: 30px;
+  color: blue;
+}

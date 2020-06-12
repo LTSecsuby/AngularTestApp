@@ -1,0 +1,5 @@
+.app-add-notes-bar{
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
