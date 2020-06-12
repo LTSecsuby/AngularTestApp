@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+.wrapper{
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+  background-color: black;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  grid-template-areas:
+"header header"
+"navbar content";
+}
+
+.app-header{
+  background-color: white;
+  grid-area: header;
+}
+
+.app-navbar{
+  background-color: white;
+  grid-area: navbar;
+}
+
+.app-content{
+  background-color: white;
+  grid-area: content;
+}
+

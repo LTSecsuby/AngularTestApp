@@ -3,9 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { HeaderComponent } from './header/header.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ContentComponent } from './content/content.component';
+import { AddNotesBarComponent } from './add-notes-bar/add-notes-bar.component';
+import { NoteComponent } from './note/note.component';
+import { NoteContentComponent } from './note-content/note-content.component';
+import {NotesBarComponent} from './notes-bar/notes-bar.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    NavbarComponent,
+    ContentComponent,
+    AddNotesBarComponent,
+    NoteComponent,
+    NoteContentComponent,
+    NotesBarComponent
   ],
   imports: [
     BrowserModule
