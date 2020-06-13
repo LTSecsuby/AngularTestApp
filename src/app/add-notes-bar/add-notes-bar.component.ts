@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from '../shared/data.service';
 
 @Component({
   selector: 'app-add-notes-bar',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNotesBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+  }
+
+  onChangeAddNewNote() {
+    this.dataService.setCheckNewNote();
+  }
+
+  onCheckNewNote() {
+    return this.dataService.getCheckNewNote();
   }
 
 }

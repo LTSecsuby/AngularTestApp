@@ -1,5 +1,4 @@
-<div>
-  <app-note></app-note>
-  <app-note></app-note>
-  <app-note></app-note>
+<div *ngFor='let elem of getNotes()'>
+  <div (click)="onCheckedActiveNote(elem.id)" class="app-note"><span>{{ elem.title }}</span> <span>{{ elem.content }}</span> <span>{{ elem.date }}</span></div>
 </div>
+

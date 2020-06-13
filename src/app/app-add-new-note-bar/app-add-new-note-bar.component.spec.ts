@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NoteComponent } from './note.component';
+import { AppAddNewNoteBarComponent } from './app-add-new-note-bar.component';
 
-describe('NoteComponent', () => {
-  let component: NoteComponent;
-  let fixture: ComponentFixture<NoteComponent>;
+describe('AppAddNewNoteBarComponent', () => {
+  let component: AppAddNewNoteBarComponent;
+  let fixture: ComponentFixture<AppAddNewNoteBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NoteComponent ]
+      declarations: [ AppAddNewNoteBarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NoteComponent);
+    fixture = TestBed.createComponent(AppAddNewNoteBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

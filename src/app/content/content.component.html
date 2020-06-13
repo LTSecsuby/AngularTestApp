@@ -1,3 +1,5 @@
 <div>
-  <app-note-content class="app-note-content-bar"></app-note-content>
+  <h1 class="app-note-content-title">{{ getOneNoteForContent().title }}</h1>
+  <div class="app-note-content">{{ getOneNoteForContent().content }}</div>
+  <div class="app-note-content">{{ getOneNoteForContent().date }}</div>
 </div>

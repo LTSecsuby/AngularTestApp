@@ -1,0 +1,5 @@
+<div class="app-add-new-note-bar">
+  <input (input)="onChangeTitleNote($event)" placeholder="Название заметки.." type="text" class="new-note-title">
+  <textarea (input)="onChangeContentNote($event)" placeholder="Текст заметки.." name="" id="" cols="30" rows="6" class="new-note-content"></textarea>
+  <button (click)="addNewNote()" class="new-note-button">Добавить заметку</button>
+</div>

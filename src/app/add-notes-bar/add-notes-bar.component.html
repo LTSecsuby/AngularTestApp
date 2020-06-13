@@ -1,3 +1,10 @@
-<img src="../../assets/plus.png" alt="add new note" class="app-button-img-note"> <span class="app-label-new-note"> Новая заметка</span>
+<div (click)="onChangeAddNewNote()" class="app-new-note-button" *ngIf="onCheckNewNote()">
+  <img src="../../assets/plus.png" class="app-button-img-note"> <span> Новая заметка</span>
+</div>
+<div class="app-new-note-button" *ngIf="!onCheckNewNote()">
+  <app-add-new-note-bar></app-add-new-note-bar>
+</div>
+
+
 
 
