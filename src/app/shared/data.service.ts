@@ -15,7 +15,6 @@ export class DataService{
   public id = 0;
   private note: any;
   public idChecked: number = null;
-  private dateNew;
 
   getCheckNewNote(): boolean {
     return this.checkNewNote;
@@ -26,14 +25,7 @@ export class DataService{
 
   createNewNote(titleNew: string, contentNew: string): void {
     this.id++;
-    this.dateNew = new Date().toLocaleString('ru', {year: 'numeric',
-      month: 'numeric',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-    });
-    this.arrayNotes.push({id: this.id, title: titleNew, content: contentNew, date: this.dateNew});
+    this.arrayNotes.push({id: this.id, title: titleNew, content: contentNew, date: new Date()});
   }
   getAllNote() {
     return this.arrayNotes;
