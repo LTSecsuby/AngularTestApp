@@ -8,7 +8,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContentComponent } from './content/content.component';
 import { AddNotesBarComponent } from './add-notes-bar/add-notes-bar.component';
 import {NotesBarComponent} from './notes-bar/notes-bar.component';
-import { AppAddNewNoteBarComponent } from './app-add-new-note-bar/app-add-new-note-bar.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { AppAddNewNoteBarComponent } from './app-add-new-note-bar/app-add-new-no
     NavbarComponent,
     ContentComponent,
     AddNotesBarComponent,
-    NotesBarComponent,
-    AppAddNewNoteBarComponent
+    NotesBarComponent
   ],
   imports: [
     BrowserModule

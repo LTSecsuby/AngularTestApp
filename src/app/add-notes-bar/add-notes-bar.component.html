@@ -1,9 +1,14 @@
-<div (click)="onChangeAddNewNote()" class="app-new-note-button" *ngIf="onCheckNewNote()">
+<div (click)="onChangeAddNewNote()" class="app-new-note-button" *ngIf="onCheckNewNote(); else newNote">
   <img src="../../assets/plus.png" class="app-button-img-note"> <span> Новая заметка</span>
 </div>
-<div class="app-new-note-button" *ngIf="!onCheckNewNote()">
-  <app-add-new-note-bar></app-add-new-note-bar>
-</div>
+<ng-template #newNote>
+  <div class="app-new-note-label">
+    <input (input)="onChangeTitleNote($event)" placeholder="Название заметки.." type="text" class="new-note-title">
+    <textarea (input)="onChangeContentNote($event)" placeholder="Текст заметки.." name="" id="" cols="20" rows="5" class="new-note-content"></textarea>
+    <button (click)="addNewNote()" class="new-note-button">Добавить</button>
+  </div>
+</ng-template>
+
 
 
 

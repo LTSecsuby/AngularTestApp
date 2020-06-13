@@ -1,21 +1,21 @@
 import {Injectable} from '@angular/core';
 
-export interface Data {
+export interface Notes {
   id: number;
   title: string;
   content: string;
-  date: number;
+  date: Date;
 }
 
 @Injectable({providedIn: 'root'})
 export class DataService{
 
   public checkNewNote = true;
-  public data: Data[];
-  public arrayNotes = [];
+  public arrayNotes: Notes[] = [];
   public id = 0;
   private note: any;
   public idChecked: number = null;
+  private dateNew;
 
   getCheckNewNote(): boolean {
     return this.checkNewNote;
@@ -26,7 +26,14 @@ export class DataService{
 
   createNewNote(titleNew: string, contentNew: string): void {
     this.id++;
-    this.arrayNotes.push({id: this.id, title: titleNew, content: contentNew, date: new Date()});
+    this.dateNew = new Date().toLocaleString('ru', {year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    });
+    this.arrayNotes.push({id: this.id, title: titleNew, content: contentNew, date: this.dateNew});
   }
   getAllNote() {
     return this.arrayNotes;

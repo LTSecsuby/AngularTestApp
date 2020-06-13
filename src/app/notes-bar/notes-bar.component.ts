@@ -10,7 +10,7 @@ export class NotesBarComponent implements OnInit {
 
   array = [];
 
-  constructor(private dataService: DataService) { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit(): void {
   }
