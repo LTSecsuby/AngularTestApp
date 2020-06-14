@@ -1,17 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localeRu from '@angular/common/locales/ru';
 
-import { AppComponent } from './app.component';
+import { Routes, RouterModule } from '@angular/router';
 
+import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContentComponent } from './content/content.component';
 import { AddNotesBarComponent } from './add-notes-bar/add-notes-bar.component';
 import { NotesBarComponent } from './notes-bar/notes-bar.component';
+import { NoteComponent } from './note/note.component';
+import { MainComponent } from './main/main.component';
 
 registerLocaleData(localeRu, 'ru');
+
+const appRoutes: Routes = [
+  { path: '', component: MainComponent },
+  { path: 'note/:id', component: NoteComponent },
+  { path: '**', component: MainComponent }
+];
 
 @NgModule({
   declarations: [
@@ -20,10 +30,15 @@ registerLocaleData(localeRu, 'ru');
     NavbarComponent,
     ContentComponent,
     AddNotesBarComponent,
-    NotesBarComponent
+    NotesBarComponent,
+    NoteComponent,
+    MainComponent
   ],
+  entryComponents: [ NoteComponent ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

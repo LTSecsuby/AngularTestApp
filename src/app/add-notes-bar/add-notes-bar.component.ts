@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataService} from '../shared/data.service';
 
 @Component({
@@ -8,8 +8,8 @@ import {DataService} from '../shared/data.service';
 })
 export class AddNotesBarComponent implements OnInit {
 
-  public title: string;
-  public content: string;
+  public title = 'Название заметки..';
+  public content = 'Текст заметки..';
 
   constructor(private dataService: DataService) { }
 
@@ -22,14 +22,6 @@ export class AddNotesBarComponent implements OnInit {
 
   onCheckNewNote() {
     return this.dataService.getCheckNewNote();
-  }
-
-  onChangeTitleNote(event: any): void {
-    this.title = event.target.value;
-  }
-
-  onChangeContentNote(event: any): void {
-    this.content = event.target.value;
   }
 
   addNewNote(): void {

@@ -3,9 +3,12 @@
 </div>
 <ng-template #newNote>
   <div class="app-new-note-label">
-    <input (input)="onChangeTitleNote($event)" placeholder="Название заметки.." type="text" class="new-note-title">
-    <textarea (input)="onChangeContentNote($event)" placeholder="Текст заметки.." name="" id="" cols="20" rows="5" class="new-note-content"></textarea>
-    <button (click)="addNewNote()" class="new-note-button">Добавить</button>
+    <input [(ngModel)]="title" value="{{title}}" placeholder="{{title}}" type="text" class="new-note-title">
+    <textarea [(ngModel)]="content" placeholder="{{content}}" cols="20" rows="5" class="new-note-content"></textarea>
+    <div class="button-container">
+      <button (click)="addNewNote()" class="new-note-button">Добавить</button>
+      <button (click)="onChangeAddNewNote()" class="close-button">Закрыть</button>
+    </div>
   </div>
 </ng-template>
 

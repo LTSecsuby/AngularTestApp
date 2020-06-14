@@ -22,7 +22,6 @@ export class DataService{
   setCheckNewNote(): void {
     this.checkNewNote = !this.checkNewNote;
   }
-
   createNewNote(titleNew: string, contentNew: string): void {
     this.id++;
     this.arrayNotes.push({id: this.id, title: titleNew, content: contentNew, date: new Date()});
@@ -35,10 +34,20 @@ export class DataService{
     this.idChecked = id;
   }
 
-  getOneNoteById() {
+  getOneNoteByIdChecked() {
     this.note = Object.create(null);
     this.arrayNotes.forEach(element => {
       if (element.id === this.idChecked) {
+        this.note = element;
+      }
+    });
+    return this.note;
+  }
+
+  getOneNoteById(idNote: number) {
+    this.note = Object.create(null);
+    this.arrayNotes.forEach(element => {
+      if (element.id === idNote) {
         this.note = element;
       }
     });

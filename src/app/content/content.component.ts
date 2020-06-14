@@ -14,6 +14,6 @@ export class ContentComponent implements OnInit {
   }
 
   getOneNoteForContent() {
-    return this.dataService.getOneNoteById();
+    return this.dataService.getOneNoteByIdChecked();
   }
 }
